@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="fond"></section>
+    <section class="s1">
+        <div class="main">
+            <!-- <img src="google.png" alt=""> -->
+            <div class="searchBx">
+                <input type="text" name="" class="query">
+                <div class="icons">
+                    <div><img src="search.png" alt=""></div>
+                </div>
+            </div>
+            <ul>
+                <li class="imgbtn" onclick="ecosiaClick()"><img src="./logo/ecosia.svg" height="89px" width="140px"></li>
+                <li class="imgbtn" onclick="googleClick()"><img src="./logo/Google.svg" height="89px" width="140px"></li>
+                <li class="imgbtn" onclick="youtubeClick()"><img src="./logo/YouTube.svg" height="89px" width="140px"></li>
+                <li class="imgbtn" onclick="twitchClick()"><img src="./logo/Twitch.svg" height="89px" width="140px"></li>
+                <li class="imgbtn" onclick="twitterClick()"><img src="./logo/Twitter.svg" height="89px" width="140px"></li>
+            </ul><ul>
+                <li class="imgbtn" onclick="furaffinityClick()"><img src="./logo/FurAffinity.svg" height="89px" width="140px"></li>
+                <li class="imgbtn" onclick="francefurClick()"><img src="./logo/francefur.svg" height="89px" width="140px"></li>
+                <li class="imgbtn" onclick="wikifurClick()"><img src="./logo/wikifur.svg" height="89px" width="140px"></li>
+                <li class="imgbtn" onclick="wikipediaClick()"><img src="./logo/Wikipedia.svg" height="89px" width="140px"></li>
+                <li class="imgbtn" onclick="redditClick()"><img src="./logo/Reddit.svg" height="89px" width="140px"></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="gmail">
+        <div class="gmailImgDiv"><a href="https://mail.google.com"><img src="./logo/Gmail.svg" alt=""></a></div>
+    </section>
+
+    <section class="credits">
+        <div><h4>coded by <a href="robin888b.github.io">Raven Spart/Robin888b</a></h4><p>backround image on <a href="https://www.pexels.com/fr-fr/photo/photo-d-illustration-multicolore-2832382/">pexels.com</a> by <a href="https://www.pexels.com/fr-fr/@anniroenkae">Anni Roenkae</a></p></div>
+    </section>
+
+
+
+
+    <script>
+        let query = document.querySelector('.query');
+        function ejs_code_clavier(keyStroke){
+            ejs_code_eventChooser = (!document.all) ? keyStroke.which : event.keyCode;
+            if (event.keyCode == 13){if (query.value != "") { let url = 'https://www.ecosia.org/search?q='+query.value; window.open(url,'_self');}}
+        }document.onkeypress = ejs_code_clavier;
+        
+        function ecosiaClick(){if (query.value != "") { let url = 'https://www.ecosia.org/search?q='+query.value; window.open(url,'_self');}}
+        function googleClick(){if (query.value != "") { let url = 'https://www.google.com/search?q='+query.value; window.open(url,'_self');}}
+        function youtubeClick(){if (query.value != "") { let url = 'https://www.youtube.com/results?search_query='+query.value; window.open(url,'_self');}else {window.open('https://www.youtube.com','_self')}}
+        function twitchClick(){if (query.value != "") { let url = 'https://www.twitch.tv/search?term='+query.value; window.open(url,'_self');}else {window.open('https://www.twitch.tv','_self')}}
+        function twitterClick(){window.open("https://search.twitter.com/?go","_self")}
+        function furaffinityClick(){if (query.value != "") {let url = 'https://www.furaffinity.net/search/?q='+query.value;window.open(url,'_self');}else{window.open("https://www.furaffinity.net","_self")}}
+        function francefurClick(){if (query.value != "") { let url = 'https://forum.francefurs.org/search.php?keywords='+query.value; window.open(url,'_self');}else {window.open('https://forum.francefurs.org','_self')}}
+        function wikifurClick(){if (query.value != "") { let url = 'https://fr.wikifur.com/w/index.php?title=Special%3ASearch&search='+query.value; window.open(url,'_self');}else {window.open('https://fr.wikifur.com','_self')}}
+        function wikipediaClick(){if (query.value != "") { let url = 'https://fr.wikipedia.org/w/index.php?title=Spécial:Recherche&search='+query.value; window.open(url,'_self');}else {window.open('https://fr.wikipedia.org','_self')}}
+        function redditClick(){if (query.value != "") { let url = 'https://www.reddit.com/search/?q='+query.value; window.open(url,'_self');}else {window.open('https://www.reddit.com','_self')}}
+    </script>
+</body>
+</html>
