@@ -22,12 +22,12 @@
                 <li class="imgbtn" onclick="youtubeClick()"><img src="./logo/YouTube.svg" height="89px" width="140px"></li>
                 <li class="imgbtn" onclick="twitchClick()"><img src="./logo/Twitch.svg" height="89px" width="140px"></li>
                 <li class="imgbtn" onclick="twitterClick()"><img src="./logo/Twitter.svg" height="89px" width="140px"></li>
-            </ul><ul>
                 <li class="imgbtn" onclick="furaffinityClick()"><img src="./logo/FurAffinity.svg" height="89px" width="140px"></li>
                 <li class="imgbtn" onclick="francefurClick()"><img src="./logo/francefur.svg" height="89px" width="140px"></li>
                 <li class="imgbtn" onclick="wikifurClick()"><img src="./logo/wikifur.svg" height="89px" width="140px"></li>
                 <li class="imgbtn" onclick="wikipediaClick()"><img src="./logo/Wikipedia.svg" height="89px" width="140px"></li>
                 <li class="imgbtn" onclick="redditClick()"><img src="./logo/Reddit.svg" height="89px" width="140px"></li>
+                <li class="imgbtn" onclick="githubClick()"><img src="./logo/github.svg" height="89px" width="140px"></li>
             </ul>
         </div>
     </section>
@@ -50,6 +50,9 @@
             if (event.keyCode == 13){if (query.value != "") { let url = 'https://www.ecosia.org/search?q='+query.value; window.open(url,'_self');}}
         }document.onkeypress = ejs_code_clavier;
         
+        function githubClick(){if (query.value != "") { let url = "https://github.com/search?q="+query.value; window.open(url, '_self')} else {
+            window.open("https://github.com", '_self')
+        }}
         function ecosiaClick(){if (query.value != "") { let url = 'https://www.ecosia.org/search?q='+query.value; window.open(url,'_self');}}
         function googleClick(){if (query.value != "") { let url = 'https://www.google.com/search?q='+query.value; window.open(url,'_self');}}
         function youtubeClick(){if (query.value != "") { let url = 'https://www.youtube.com/results?search_query='+query.value; window.open(url,'_self');}else {window.open('https://www.youtube.com','_self')}}
