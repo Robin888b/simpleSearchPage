@@ -47,9 +47,9 @@
         let query = document.querySelector('.query');
         function ejs_code_clavier(keyStroke){
             ejs_code_eventChooser = (!document.all) ? keyStroke.which : event.keyCode;
-            if (event.keyCode == 13){if (query.value != "") { let url = 'https://www.ecosia.org/search?q='+query.value; window.open(url,'_self');}}
+            if (event.keyCode == 13){if (query.value != "") { let url = `https://yandex.com/search/?text=${query.value}&lang=en`; window.open(url,'_self');}}
         }document.onkeypress = ejs_code_clavier;
-        
+        //https://yandex.com/search/?text=furry&lr=105066&lang=en
         function githubClick(){if (query.value != "") { let url = "https://github.com/search?q="+query.value; window.open(url, '_self')} else {
             window.open("https://github.com", '_self')
         }}
